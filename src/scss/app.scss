@@ -1,0 +1,138 @@
+.App {
+  font-family: arial;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 30px;
+  
+  .head {
+    p:first-child {
+      font-size: 22px;
+    }
+    p:last-child {
+      color: grey;
+    }
+  }
+  .timer {
+    .progressbar {
+      width: 70%;
+      margin: 0 auto;
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      button {
+        width: 20%;
+        color: #6c3e77;
+        background-color: white;
+        font-weight: bold;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 7px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        transition: 0.18s ease-in-out;
+        /* Hover style */
+        &:hover {
+          background-color: #6c3e77;
+          color: white;
+          cursor: pointer;
+        }
+
+        /* Disabled style */
+        &:disabled {
+          background-color: lightgray;
+          color: gray;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .stepCard {
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #f0ecf1;
+    padding: 10px 0;
+    .row-1 {
+      text-align: start;
+      margin-left: 35px;
+      >p{
+        >span{
+            color: grey;
+            font-size: 14px;
+        }
+      }
+    }
+    .row-2 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      div{
+        width: 48%;
+      }
+      .lft{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+          >div {
+            width: 50%;
+            margin: auto;
+            display: grid;
+            // border: 1px solid red;
+            gap: 16px;
+            >div:first-child{
+                >span{
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+            }
+            >div {
+              display: flex;
+            //   border: 1px solid blue;
+              width: 100%;
+              gap: 10px;
+            }
+            >div:last-child>span:first-child{
+                color: #6c3e77;
+                font-weight: bold;
+              }
+            >div:last-child>span:last-child{
+                font-size: 14px;
+            }
+            >img {
+              width: 60%;
+              margin: 0px 0px 0px 30px;
+            }
+          }
+      }
+      .rgt{
+        display: flex;
+        // border: 1px solid red;
+        align-items: end;
+        justify-content: end;
+        // padding: 14px;
+
+        font-weight: bold;
+        color: #6c3e77;
+        span{
+            margin-right: 14px;
+            // border: 1px solid;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .App {
+        width: 300px;
+    }
+  }
