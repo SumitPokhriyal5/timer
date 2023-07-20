@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "../scss/app.scss";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlinePause } from "react-icons/ai";
 import { VscDebugRestart } from "react-icons/vsc";
+import { BsSkipStartCircleFill } from "react-icons/bs";
 
 const Timer = () => {
   const initialTime = 60;
@@ -70,6 +71,7 @@ const Timer = () => {
           Reset
         </button>
         <button onClick={handleStartStop}>
+          {isRunning ? <AiOutlinePause /> : <BsSkipStartCircleFill />}
           {isRunning ? "Pause" : "Start"}
         </button>
       </div>
